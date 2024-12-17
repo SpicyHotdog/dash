@@ -14,7 +14,7 @@ class MainApplication:
         return self.__app
 
     def set_layout(self):
-        self.app.layout = html.Div(["Your Dash App Layout..."])
+        self.app.layout = html.Div(["Build something here..."])
 
 
 # Instantiate the Dash application
