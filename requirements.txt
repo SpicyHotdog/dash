@@ -1,0 +1,8 @@
+dash==2.14.1
+dash-bootstrap-components==1.4.2
+plotly==5.17.0
+pandas==2.1.2
+numpy==1.26.0
+xgboost==1.7.6
+scikit-learn==1.4.2
+yfinance==0.2.30
