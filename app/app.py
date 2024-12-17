@@ -1,4 +1,4 @@
-from dash import Dash, html
+from dash import Dash, page_container, html
 
 class MainApplication:
     def __init__(self):
@@ -11,9 +11,17 @@ class MainApplication:
     @property
     def app(self):
         return self.__app
-    
+
     def set_layout(self):
         self.app.layout = html.Div(["Your Dash App Layout..."])
 
+
+# Instantiate the Dash application
 Application = MainApplication()
-app = Application.app.server
+# Expose the Flask server to Vercel
+app = Application.app.server  # Vercel expects `app` to be the Flask instance
+
+if __name__ == "__main__":
+    import os
+    port = int(os.getenv("PORT", 5000))  # Use dynamic port
+    Application.app.run(port=port, dev_tools_ui=True, debug=True, host="0.0.0.0")
