@@ -20,6 +20,7 @@ class MainApplication:
 Application = MainApplication()
 # Expose the Flask server to Vercel
 app = Application.app.server  # Vercel expects `app` to be the Flask instance
+print('test')
 
 if __name__ == "__main__":
     import os
